@@ -4,19 +4,17 @@
   --accent-color: #2196f3;
   --main-title-color: #ffffff;
   --basement-contact-color: rgba(255, 255, 255, 0.6);
+  --main-background-color: #2f303a;
+}
+
+* {
+  list-style: none;
+  text-decoration: none;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
 }
 
 /* head */
@@ -83,6 +81,10 @@ a {
   letter-spacing: 0.06em;
   color: var(--main-title-color);
   background-color: var(--accent-color);
+}
+
+.hero-item {
+  background-color: var(--main-background-color);
 }
 
 /*features*/
@@ -167,6 +169,10 @@ a {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--basement-contact-color);
+}
+
+.basement-item {
+  background-color: var(--main-background-color);
 }
 
 /*portfolio*/
