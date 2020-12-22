@@ -1,10 +1,13 @@
 :root {
+  --color-bright-grey:  #F5F4FA;
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --main-title-color: #ffffff;
   --basement-contact-color: rgba(255, 255, 255, 0.6);
   --main-background-color: #2f303a;
+
+  --team-background-color: var(--color-bright-grey);
 }
 
 * {
@@ -20,6 +23,8 @@ body {
 /* head */
 
 .logo {
+  margin: 24px 93px 25px 0;
+
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 26px;
@@ -33,6 +38,7 @@ body {
 }
 
 .nav-link {
+  margin-right: 50px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -50,6 +56,7 @@ body {
 }
 
 .contact {
+  margin-left: 50px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -62,9 +69,45 @@ body {
   color: var(--accent-color);
 }
 
+.container{
+  outline: 2px solid red;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-nav{
+  display: flex;
+}
+
+.header-nav{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header-contact{
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
 /*hero*/
 
 .main-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding: 200px 250px 0 250px;
+  
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -74,10 +117,17 @@ body {
 }
 
 .order {
+  display: inline-block;
+  min-width: 200px;
+  height: 50px;
+  padding: 10px 32px;
+  border-radius: 4px;
+  margin-bottom: 200px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  text-align: center;
+  /* align-items: center; */
   letter-spacing: 0.06em;
   color: var(--main-title-color);
   background-color: var(--accent-color);
@@ -85,11 +135,29 @@ body {
 
 .hero-item {
   background-color: var(--main-background-color);
+  text-align: center;
 }
 
 /*features*/
+.invisible{
+  display: none;
+}
+
+.feartures-group{
+  margin: 0;
+  padding: 94px 0 94px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.features-item{
+
+}
 
 .features-title {
+  margin: 0;
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -99,6 +167,9 @@ body {
 }
 
 .features-text {
+  margin: 0;
+  width: 270px;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
@@ -109,35 +180,79 @@ body {
 /*actions*/
 
 .actions-title {
+  margin: 0;
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
+  text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+}
+
+.actions-group{
+  margin: 0;
+  padding: 0;
+  padding-bottom: 94px;
+  display: flex;
+  justify-content: space-between;
 }
 
 /*team*/
+.team-section{
+  background-color: var(--team-background-color);
+}
+
+.higher{
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+}
+
+.team-group{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
 
 .team-title {
+  margin: 0;
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
+  text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
 
+.team-item{
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
 .member-name {
+  margin: 30px 0px 10px 0px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
+  text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
 
 .skill {
+  margin-top: 0px;
+  margin-bottom: 30px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 1.2;
+  text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
