@@ -1,13 +1,23 @@
 :root {
-  --color-bright-grey:  #F5F4FA;
-  --primary-text-color: #757575;
-  --title-text-color: #212121;
-  --accent-color: #2196f3;
-  --main-title-color: #ffffff;
-  --basement-contact-color: rgba(255, 255, 255, 0.6);
-  --main-background-color: #2f303a;
+  --color-first-bright-grey:  #F5F4FA;
+  --color-second-bright-grey: #EEEEEE;
+  --color-third-bright-grey: #ECECEC;
+  --color-fourth-bright-grey: rgba(255, 255, 255, 0.6);
+  --color-fifth-bright-grey: #757575;  
+  --color-black: #212121;
+  --color-bright-blue: #2196f3;
+  --color-white: #ffffff;  
+  --color-dark-blue: #2f303a;
 
-  --team-background-color: var(--color-bright-grey);
+  --team-background-color: var(--color-first-bright-grey);
+  --portfolio-border-color: var(--color-second-bright-grey);
+  --header-underline-color: var(--color-third-bright-grey);
+  --basement-contact-color: var(--color-fourth-bright-grey);
+  --primary-text-color: var(--color-fifth-bright-grey);  
+  --title-text-color: var(--color-black);
+  --accent-color: var(--color-bright-blue);
+  --main-title-color: var(--color-white);  
+  --main-background-color:var(--color-dark-blue);
 }
 
 * {
@@ -22,6 +32,25 @@ body {
 
 /* head */
 
+.container{
+  /* outline: 2px solid red; */
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-nav{
+  display: flex;
+}
+
 .logo {
   margin: 24px 93px 25px 0;
 
@@ -31,6 +60,13 @@ body {
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+}
+
+.header-nav{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 .logo-dif {
@@ -55,6 +91,12 @@ body {
   color: var(--accent-color);
 }
 
+.header-contact{
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
 .contact {
   margin-left: 50px;
   font-weight: 500;
@@ -69,36 +111,8 @@ body {
   color: var(--accent-color);
 }
 
-.container{
-  outline: 2px solid red;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.header-inner{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.container-nav{
-  display: flex;
-}
-
-.header-nav{
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-
-.header-contact{
-  padding: 0;
-  margin: 0;
-  display: flex;
+.head{
+  border-bottom: 1px solid var(--header-underline-color);
 }
 
 /*hero*/
@@ -148,10 +162,6 @@ body {
   padding: 94px 0 94px 0;
   display: flex;
   justify-content: space-between;
-}
-
-.features-item{
-
 }
 
 .features-title {
@@ -260,6 +270,10 @@ body {
 /*basement*/
 
 .basement-logo {
+  display: flex;
+  padding-top: 60px;
+  margin-bottom: 20px;
+
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 26px;
@@ -268,7 +282,15 @@ body {
   color: var(--main-title-color);
 }
 
-.basement-addres {
+.address-group{
+  display: flex;
+  flex-direction: column;
+}
+
+.basement-address {
+  margin: 0;
+  margin-bottom: 9px;
+
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
@@ -286,13 +308,35 @@ body {
   color: var(--basement-contact-color);
 }
 
+.mail{
+  margin-bottom: 9px;
+}
+
+.phone{
+  margin-bottom: 60px;
+}
+
 .basement-item {
   background-color: var(--main-background-color);
 }
 
 /*portfolio*/
 
+.buttons-list{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+  padding-top: 94px;
+}
+
 .portfolio-filter {
+  margin-right: 8px;
+  padding: 6px 22px;
+  border: none;
+  border-radius: 4px;
+
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
@@ -306,9 +350,26 @@ body {
 .portfolio-filter:focus {
   color: var(--main-title-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-list{
+  margin: 0;
+  padding: 0;
+  padding-bottom: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.portfolio-item{
+  margin-bottom: 30px;
+  border: 1px solid var(--portfolio-border-color);
 }
 
 .portfolio-title {
+  margin: 20px 24px 4px 24px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -317,6 +378,7 @@ body {
 }
 
 .portfolio-text {
+  margin: 0 24px 20px 24px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
