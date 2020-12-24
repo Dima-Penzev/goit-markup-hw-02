@@ -9,6 +9,14 @@
   --color-white: #ffffff;  
   --color-dark-blue: #2f303a;
 
+  --color-first-black-shadow: rgba(0, 0, 0, 0.12);
+  --color-second-black-shadow: rgba(0, 0, 0, 0.14);
+  --color-third-black-shadow: rgba(0, 0, 0, 0.2);
+
+  --color-fourth-black-shadow: rgba(0, 0, 0, 0.1);
+  --color-fifth-black-shadow: rgba(0, 0, 0, 0.08);
+  --color-sixth-black-shadow: rgba(0, 0, 0, 0.12);
+
   --team-background-color: var(--color-first-bright-grey);
   --portfolio-border-color: var(--color-second-bright-grey);
   --header-underline-color: var(--color-third-bright-grey);
@@ -18,6 +26,14 @@
   --accent-color: var(--color-bright-blue);
   --main-title-color: var(--color-white);  
   --main-background-color:var(--color-dark-blue);
+
+  --team-item-shadow-first: var(--color-first-black-shadow);
+  --team-item-shadow-second: var(--color-second-black-shadow);
+  --team-item-shadow-third: var(--color-third-black-shadow);
+
+  --portfolio-filter-shadow-first: var(--color-fourth-black-shadow);
+  --portfolio-filter-shadow-second: var(--color-fifth-black-shadow);
+  --portfolio-filter-shadow-third: var(--color-sixth-black-shadow);
 }
 
 * {
@@ -33,7 +49,6 @@ body {
 /* head */
 
 .container{
-  /* outline: 2px solid red; */
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
@@ -118,10 +133,9 @@ body {
 /*hero*/
 
 .main-title {
-  margin-top: 0;
-  margin-bottom: 30px;
-  padding: 200px 250px 0 250px;
-  
+  margin: 0 250px 30px;
+  padding-top: 200px;
+    
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -141,7 +155,6 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  /* align-items: center; */
   letter-spacing: 0.06em;
   color: var(--main-title-color);
   background-color: var(--accent-color);
@@ -240,12 +253,14 @@ body {
 
 .team-item{
   background-color: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0 1px 3px var(--team-item-shadow-first), 
+              0 1px 1px var(--team-item-shadow-second), 
+              0 2px 1px var(--team-item-shadow-third);
+  border-radius: 0 0 4px 4px;
 }
 
 .member-name {
-  margin: 30px 0px 10px 0px;
+  margin: 30px 0 10px;
 
   font-weight: 500;
   font-size: 16px;
@@ -256,7 +271,7 @@ body {
 }
 
 .skill {
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 30px;
 
   font-weight: 400;
@@ -269,10 +284,13 @@ body {
 
 /*basement*/
 
+.basement-item {
+  background-color: var(--main-background-color);
+}
+
 .basement-logo {
-  display: flex;
-  padding-top: 60px;
-  margin-bottom: 20px;
+  display: inline-block;
+  margin: 60px 0 20px;
 
   font-family: 'Raleway';
   font-weight: 700;
@@ -283,14 +301,15 @@ body {
 }
 
 .address-group{
+  width: 231px;
+  padding-bottom: 60px;
   display: flex;
   flex-direction: column;
-}
+} 
 
 .basement-address {
   margin: 0;
-  margin-bottom: 9px;
-
+  
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
@@ -308,16 +327,8 @@ body {
   color: var(--basement-contact-color);
 }
 
-.mail{
+.interval:not(:last-child){
   margin-bottom: 9px;
-}
-
-.phone{
-  margin-bottom: 60px;
-}
-
-.basement-item {
-  background-color: var(--main-background-color);
 }
 
 /*portfolio*/
@@ -350,7 +361,9 @@ body {
 .portfolio-filter:focus {
   color: var(--main-title-color);
   background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 1px var(--portfolio-filter-shadow-first), 
+              0 1px 2px var(--portfolio-filter-shadow-second), 
+              0 2px 2px var(--portfolio-filter-shadow-third);
 }
 
 .portfolio-list{
@@ -379,6 +392,7 @@ body {
 
 .portfolio-text {
   margin: 0 24px 20px 24px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
